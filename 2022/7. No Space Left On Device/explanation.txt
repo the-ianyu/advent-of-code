@@ -1,0 +1,16 @@
+// main
+> input file, splits into lines, and deletes the first line ("$ cd /") [Line 1-9]
+> initializes a variable, known as current_directory - this is the current directory you are at. it starts with "main"[Line 10]
+> intializes two lists, one contains all created directories ("directory_list"), the other one contains the volume of all created directories ("directory_volume") [Line 11-12]
+> loops through the input. There are practically only 4 possible commands, which are "$ cd", "$ ls", "dir", and file creation. [Line 14]
+> if the command is "$ cd", the program finds if it is a back or forward command. If it is two dots "..", it decides it is a back command, and deletes the text to the right of the most recent slash. Otherwise, it adds the directory it is entering to current_directory. [Line 15-19]
+> else, if the command is "$ ls", it skips that line as "$ ls" does nothing [Line 20-21]
+> else, if the command is "dir", a directory is created at the current location, its name is added to "directory_list", and the value of 0 is appended to "directory_volume". [Line 22-24]
+> else, the command must be file creation. As the file suffix doesn't matter, it cuts it off, and adds the volume of the file to the appropriate location in "directory_volume".
+// solution
+> the list "nlist" and variable "maxima" is initialized. "nlist" contains the total capacity of all directories, and "maxima" is a variable for part 1. [Line 31-32]
+> the for loops loop through all directories, and finds the total capcity of the current directory. if this value is less than 100,000, it is added to "maxima". it is also appended to nlist regardless of the value. [Line 33-40]
+> answer to part 1 printed [Line 41]
+> the deletion amount required is initialized [Line 42]
+> nlist is sorted [Line 43]
+> nlist is looped through. the first number that is larger than the deletion requirement is printed as the part 2 solution, and the program ends. [Line 44-47]
