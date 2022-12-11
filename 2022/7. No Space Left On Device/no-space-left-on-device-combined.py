@@ -1,6 +1,6 @@
 import os
 
-filename = "current.txt"
+filename = "no-space-left-on-device.txt"
 here = os.path.dirname(os.path.abspath(__file__))
 filepath = os.path.join(here, filename)
 
