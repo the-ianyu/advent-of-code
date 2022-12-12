@@ -17,7 +17,7 @@ for i in monkeyTest:
 
 def main(part):
     monkeyInspections = [0 for _ in range(len(monkeyTest))]
-    monkeyItems = [[[int(x) for x in (content[y][18:]).split(", ")] for y in range(1, len(content), 7)]][0]
+    monkeyItems = [[int(x) for x in (content[y][18:]).split(", ")] for y in range(1, len(content), 7)]
     for _ in range(0, (20 if part == 1 else 10000 if part == 2 else 0)):
         for i in range(0, len(monkeyInspections)):
             for j in range(0, len(monkeyItems[i])):

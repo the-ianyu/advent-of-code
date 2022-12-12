@@ -8,10 +8,10 @@ with open(filepath, "r") as f:
     content = f.read().splitlines()
 
 horlen, verlen = len(content[0]), len(content)
-lst = [[] for _ in range(horlen)]
+lst = [[] for _ in range(verlen)]
 
-for i in range(0, horlen):
-    for j in range(0, verlen):
+for i in range(0, verlen):
+    for j in range(0, horlen):
         lst[i].append(content[i][j])
     lst[i] = [int(x) for x in lst[i]]
 
