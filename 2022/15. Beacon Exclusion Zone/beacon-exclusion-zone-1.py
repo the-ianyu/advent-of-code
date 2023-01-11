@@ -15,7 +15,7 @@ for i in range(0, len(content)):
     tempBeacon = (int(temp[8][2:-1]), int(temp[9][2:]))
     beaconLocations.add(tempBeacon) if tempBeacon[1] == currentRow else None
     tempDistance = sum(abs(x-y) for x, y in zip(tempSensor, tempBeacon))
-    endpoint = (tempDistance-abs(tempSensor[1]-currentRow))
-    for y in range(tempSensor[0]-endpoint, tempSensor[0]+endpoint+1):
+    midpoint = (tempDistance-abs(tempSensor[1]-currentRow))
+    for y in range(tempSensor[0]-midpoint, tempSensor[0]+midpoint+1):
         impossibleLocations.add(y)
 print("Part 1:", len(impossibleLocations)-len(beaconLocations))

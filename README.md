@@ -1,2 +1,2 @@
 # advent-of-code
- Repository for Advent of Code
+ Repository for [Advent of Code](https://adventofcode.com)

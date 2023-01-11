@@ -1,0 +1,16 @@
+import os
+
+filename = "password-philosophy.txt"
+here = os.path.dirname(os.path.abspath(__file__))
+filepath = os.path.join(here, filename)
+
+with open(filepath, "r") as f:
+    content = f.read().splitlines()
+
+total = 0
+for i in range(0, len(content)):
+    temp = content[i].split(" ")
+    rnge = [int(x) for x in temp[0].split("-")]
+    if (temp[2][rnge[0]-1] == temp[1][0]) ^ (temp[2][rnge[1]-1] == temp[1][0]):
+        total += 1
+print("Part 2:", total)

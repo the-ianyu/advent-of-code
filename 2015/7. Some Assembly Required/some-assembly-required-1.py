@@ -51,27 +51,54 @@ def LSHIFT(x, num):
 def RSHIFT(x, num):
     return x >> num
 
-lst = [["" for _ in range(26)] for _ in range(27)]
+# recognized = []
+# for i in range(0, len(content)):
+#     match content[i][0]:
+#         case [x]:
+#             content[i][0] = int(x)
+#             recognized.append(content[i][1])
+#         case ["NOT", x]:
+#             if x in recognized:
+#                 content[i][0] = NOT(int(x))
+#                 recognized.append(content[i][1])
+#         case [x, "AND", y]:
+#             if x in recognized and y in recognized:
+#                 content[i][0] = AND(int(x), int(y))
+#                 recognized.append(content[i][1])
+#         case [x, "OR", y]:
+#             if x in recognized and y in recognized:
+#                 content[i][0] = OR(int(x), int(y))
+#                 recognized.append(content[i][1])
+#         case [x, "LSHIFT", y]:
+#             if x in recognized:
+#                 content[i][0] = LSHIFT(int(x), int(y))
+#                 recognized.append(content[i][1])
+#         case [x, "RSHIFT", y]:
+#             if x in recognized:
+#                 content[i][0] = RSHIFT(int(x), int(y))
+#                 recognized.append(content[i][1])
+# print(content)
+# lst = [["" for _ in range(26)] for _ in range(27)]
 
-for i in range(0, len(content)):
-    try:
-        content[i][0][0] = int(content[i][0][0])
-        if len(content[i][0]) == 1:
-            print(len(content[i][1]))
-            if len(content[i][1]) == 1:
-                lst[0][letters.find(content[i][1])] = content[i][0][0]
-                content[i][0][0] = "null"
-            elif len(content[i][1]):
-                lst[letters.find(content[i][1][0])][letters.find(content[i][1][1])] = content[i][0][0]
-                content[i][0][0] = "null"
-    except:
-        pass
+# for i in range(0, len(content)):
+#     try:
+#         content[i][0][0] = int(content[i][0][0])
+#         if len(content[i][0]) == 1:
+#             print(len(content[i][1]))
+#             if len(content[i][1]) == 1:
+#                 lst[0][letters.find(content[i][1])] = content[i][0][0]
+#                 content[i][0][0] = "null"
+#             elif len(content[i][1]):
+#                 lst[letters.find(content[i][1][0])][letters.find(content[i][1][1])] = content[i][0][0]
+#                 content[i][0][0] = "null"
+#     except:
+#         pass
 
-old_lst = []
-while old_lst != lst:
-    old_lst = lst[:]
-    for i in range(0, len(content)):
-        pass
+# old_lst = []
+# while old_lst != lst:
+#     old_lst = lst[:]
+#     for i in range(0, len(content)):
+#         pass
 
 # lett_ers = " " + letters
 # old_lst = []
