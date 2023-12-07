@@ -1,11 +1,11 @@
 # from os import path
 # from tqdm import tqdm
 
-# filename = 'test.txt'
+# filename = "test.txt"
 # here = path.dirname(path.abspath(__file__))
 # filepath = path.join(here, filename)
 
-# with open(filepath, 'r') as f:
+# with open(filepath, "r") as f:
 #     content = f.read().splitlines()
 #     temp = [int(x) for x in content[0][content[0].find(":")+2:].split()]
 #     maps = [[] for _ in range(7)]
@@ -15,7 +15,7 @@
 #         if flagnext:
 #             flagnext = False
 #             continue
-#         if i == '':
+#         if i == "":
 #             ptr += 1
 #             flagnext = True
 #             continue

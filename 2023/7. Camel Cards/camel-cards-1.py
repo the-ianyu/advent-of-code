@@ -1,6 +1,6 @@
 from os import path
 
-filename = 'camel-cards.txt'
+filename = "camel-cards.txt"
 here = path.dirname(path.abspath(__file__))
 filepath = path.join(here, filename)
 

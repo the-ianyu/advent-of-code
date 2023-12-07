@@ -1,10 +1,10 @@
 from os import path
 
-filename = 'if-you-give-a-seed-a-fertilizer.txt'
+filename = "if-you-give-a-seed-a-fertilizer.txt"
 here = path.dirname(path.abspath(__file__))
 filepath = path.join(here, filename)
 
-with open(filepath, 'r') as f:
+with open(filepath, "r") as f:
     content = f.read().splitlines()
     temp = [int(x) for x in content[0][content[0].find(":")+2:].split()]
     maps = [[] for _ in range(7)]
@@ -14,7 +14,7 @@ with open(filepath, 'r') as f:
         if flagnext:
             flagnext = False
             continue
-        if i == '':
+        if i == "":
             ptr += 1
             flagnext = True
             continue

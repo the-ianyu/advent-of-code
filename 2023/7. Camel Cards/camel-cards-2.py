@@ -1,10 +1,10 @@
 from os import path
 
-filename = 'camel-cards.txt'
+filename = "camel-cards.txt"
 here = path.dirname(path.abspath(__file__))
 filepath = path.join(here, filename)
 
-with open(filepath, 'r') as f:
+with open(filepath, "r") as f:
     content = [x.split() for x in f.read().splitlines()]
 
 ranker = {
